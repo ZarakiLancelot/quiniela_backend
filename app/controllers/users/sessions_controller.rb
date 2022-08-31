@@ -1,4 +1,5 @@
 class Users::SessionsController < Devise::SessionsController
+	# skip_before_action :authenticate_user!
 	respond_to :json
 
 	private
@@ -6,7 +7,8 @@ class Users::SessionsController < Devise::SessionsController
 	def respond_with(_resource, _opts = {})
 		render json: {
 			message: 'You have successfully logged in',
-			user: current_user
+			user: current_user,
+			token: request.env['warden-jwt_auth.token']
 		}, status: :ok
 	end
 
@@ -17,6 +19,7 @@ class Users::SessionsController < Devise::SessionsController
 	end
 	
 	def log_out_success
+		head :no_content
 		render json: {
 			message: 'You have successfully logged out'
 		}, status: :ok
@@ -25,6 +28,6 @@ class Users::SessionsController < Devise::SessionsController
 	def log_out_failure
 		render json: {
 			message: 'Log out failed, Hmmm nothing happened'
-		}, status: :unprocessable_entity
+		}, status: :unauthorized
 	end
 end

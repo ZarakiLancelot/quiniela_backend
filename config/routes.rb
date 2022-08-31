@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users,
-    controllers: {
-      registrations: 'users/registrations',
-      sessions: 'users/sessions'
-    }
-
+  controllers: {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions'
+  }
+  
   get '/member-data', to: 'members#show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :developers
+      resources :estadios
     end
   end
 end

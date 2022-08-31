@@ -10,7 +10,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     origins "*"
 
     resource "*",
-      headers: :any,
+      headers: %w(Authorization),
       methods: [:get, :post, :put, :patch, :delete, :options, :head],
       expose: %w[Authorization Uid]
   end
