@@ -46,6 +46,6 @@ class Api::V1::EquiposController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def equipo_params
-      params.require(:equipo).permit(:nombre, :grupo_id, :posicion, :juegos_jugados, :juegos_ganados, :juegos_empatados, :juegos_perdidos, :goleas_favor, :goles_contra, :diferencia_goles, :puntos)
+      params.require(:equipo).permit(:nombre, :grupo_id, :posicion, :juegos_jugados, :juegos_ganados, :juegos_empatados, :juegos_perdidos, :goles_favor, :goles_contra, :diferencia_goles, :puntos)
     end
 end

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha: 2022-09-11
+  horario: 2022-09-11 09:41:37
+  equipo_local_id: 1
+  equipo_visitante_id: 1
+  estadio_id: 1
+  goles_local: 1
+  goles_visitante: 1
+
+two:
+  fecha: 2022-09-11
+  horario: 2022-09-11 09:41:37
+  equipo_local_id: 1
+  equipo_visitante_id: 1
+  estadio_id: 1
+  goles_local: 1
+  goles_visitante: 1

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_11_063615) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_11_154137) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -53,6 +53,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_11_063615) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["nombre"], name: "index_grupos_on_nombre", unique: true
+  end
+
+  create_table "juegos", force: :cascade do |t|
+    t.date "fecha"
+    t.datetime "horario"
+    t.integer "equipo_local_id"
+    t.integer "equipo_visitante_id"
+    t.integer "estadio_id"
+    t.integer "goles_local"
+    t.integer "goles_visitante"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "jwt_denylist", force: :cascade do |t|

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       resources :estadios
       resources :grupos
       resources :equipos
+      resources :juegos
     end
   end
 end
