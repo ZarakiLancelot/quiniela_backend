@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  grupo: one
+  posicion: 1
+  juegos_jugados: 1
+  juegos_ganados: 1
+  juegos_empatados: 1
+  juegos_perdidos: 1
+  goleas_favor: 1
+  goles_contra: 1
+  diferencia_goles: 1
+  puntos: 1
+
+two:
+  nombre: MyString
+  grupo: two
+  posicion: 1
+  juegos_jugados: 1
+  juegos_ganados: 1
+  juegos_empatados: 1
+  juegos_perdidos: 1
+  goleas_favor: 1
+  goles_contra: 1
+  diferencia_goles: 1
+  puntos: 1

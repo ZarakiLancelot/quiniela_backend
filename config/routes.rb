@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :developers
       resources :estadios
+      resources :grupos
+      resources :equipos
     end
   end
 end

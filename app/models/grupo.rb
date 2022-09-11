@@ -1,14 +1,11 @@
 # == Schema Information
 #
-# Table name: estadios
+# Table name: grupos
 #
 #  id         :bigint           not null, primary key
 #  nombre     :string
-#  capacidad  :integer
-#  lugar      :string
-#  imagen     :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-class Estadio < ApplicationRecord
+class Grupo < ApplicationRecord
 end
